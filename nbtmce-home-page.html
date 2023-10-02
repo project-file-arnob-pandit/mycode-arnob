@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NBTMCE SKILL</title>
+    <link rel="icon" href="https://nbtmce.in/img/LOGO.jpeg" type="image-x/icon">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Times New Roman';
+        }
+
+        html,
+        body {
+            width: 100%;
+            height: 100%;
+            background: #FAFAB4;
+        }
+
+
+
+        .text {
+
+            margin-right: 180px;
+
+        }
+
+        .text h2,
+        h1 {
+            position: relative;
+            top: 20px;
+            text-align: center;
+        }
+
+        .text h2 {
+            margin-top: 5px;
+        }
+
+        .link {
+            font-style: italic;
+            font-weight: 900;
+            background: #FAFAB4;
+            display: flex;
+            align-items: center;
+            justify-content: start;
+
+            margin-top: 40px;
+            margin-left: 350px;
+        }
+
+        .link h2 {
+
+            font-weight: 900;
+            margin-bottom: 20px;
+            margin-left: 40px;
+            color: blue;
+        }
+
+        .link h2,
+        a {
+            text-decoration: none;
+            font-weight: 900;
+        }
+
+        .top-text img {
+            margin-top: 10px;
+            width: 150px;
+            height: 150px;
+            border-radius: 10px;
+            /* margin: 10px 0 0 90px; */
+            margin-left: 10%;
+            float: left;
+            box-shadow: red 5px 8px 8px;
+            margin-bottom: 20px;
+        }
+
+        .top-text h1 {
+            animation: color 4s infinite;
+        }
+
+        hr {
+            position: relative;
+            height: 2px;
+            padding-bottom: 2px;
+
+            background: blue;
+        }
+
+        @keyframes color {
+            0% {
+                color: red;
+            }
+
+            25% {
+                color: blue;
+            }
+
+            50% {
+                color: green;
+            }
+
+            75% {
+                color: yellow;
+            }
+
+            100% {
+                color: crimson;
+            }
+
+        }
+
+        /* photo sections */
+        .photo {
+            width: 90%;
+            height: 400px;
+            margin: 10px 65px;
+            background-size: contain;
+            animation: moving 20s infinite;
+            border-radius: 20px;
+            border: 8px solid crimson;
+        }
+
+
+
+        @keyframes moving {
+            0% {
+                background: url(img1.jpg);
+            }
+
+            16% {
+                background: url(img2.jpg);
+            }
+
+            32% {
+                background: url(img3.jpg);
+            }
+
+            48% {
+                background: url(img4.jpg);
+            }
+
+            64% {
+                background: url(img5.jpg);
+            }
+
+            80% {
+                background: url(img6.jpg);
+            }
+
+            100% {
+                background: url(img7.jpg);
+            }
+
+        }
+
+        .photo img {
+            width: 99%;
+            height: 390px;
+            cursor: pointer;
+            margin: 10px;
+            border-radius: 20px;
+            border: 10px solid red;
+            animation: border 5s infinite;
+
+        }
+
+        @keyframes border {
+            0% {
+                border-color: red;
+
+            }
+
+            25% {
+                border-color: yellow;
+
+            }
+
+            50% {
+                border-color: green;
+
+            }
+
+            75% {
+                border-color: crimson;
+
+            }
+
+            100% {
+                border-color: teal;
+
+            }
+        }
+
+        .contant {
+
+            background: #FAFAB4;
+        }
+
+        .contant img {
+
+            height: 200px;
+            border-radius: 10px;
+            margin-left: 15px;
+            box-shadow: green 5px 8px 15px;
+            cursor: pointer;
+        }
+
+        /* footer sections */
+        .footer {
+            width: 98%;
+            height: 120px;
+            margin-left: 15px;
+            background: orange;
+            padding: 2px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 10px;
+            box-shadow: red 0px 10px 10px;
+        }
+
+        .footer img {
+            width: 100%;
+            height: 115px;
+            border-radius: 10px;
+        }
+
+        .footer-last {
+            margin: 10px 12px;
+            padding: 10px;
+            columns: 2;
+            width: 98%;
+            height: 80px;
+            background: blue;
+            color: white;
+            border-radius: 10px;
+        }
+
+        .footer-last h3 {
+            padding-left: 35px;
+            padding-bottom: 5px;
+            font-weight: 400;
+        }
+
+        .footer-last a {
+            font-weight: 400;
+            text-decoration: none;
+            padding-top: 10px;
+            color: white;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <div class="top-text">
+
+            <img src="https://nbtmce.in/img/LOGO.jpeg" alt="">
+
+            <div class="text">
+                <h1>NBTMCE (OPC) PRIVATE LIMITED</h1>
+                <h2>AN ISO 9001:2015 & International Trade Council Certified Company</h2>
+                <h2>CIN - U74999WB2021OPC243025</h2>
+            </div>
+            <div class="link">
+                <h2> Visit -> <a href="computer-center-page.html" style="color: green;"> Computer_Center</a></h2>
+                <h2><a href="nbtmce-collage.html" style="color: blue;">COLLEGE</a></h2>
+                <h2><a href="IT_Industry.html" style="color: brown;">IT_Industry</a></h2>
+            </div>
+        </div>
+        <hr>
+    </div>
+    <div class="photo">
+    </div>
+    <div class="contant">
+        <marquee class="moving" behavior="" direction="left">
+            <img src="https://nbtmce.in/BRANCH/a1.jpg" alt="">
+            <img src="https://nbtmce.in/BRANCH/a2.jpg" alt="">
+            <img src="https://nbtmce.in/BRANCH/a3.jpg" alt="">
+            <img src="https://nbtmce.in/BRANCH/a4.jpg" alt="">
+            <img src="https://nbtmce.in/BRANCH/a5.jpg" alt="">
+            <img src="https://nbtmce.in/BRANCH/a6.jpg" alt="">
+            <img src="https://nbtmce.in/BRANCH/a7.jpg" alt="">
+            <img src="https://nbtmce.in/BRANCH/a8.jpg" alt="">
+            <img src="https://nbtmce.in/BRANCH/a9.jpg" alt="">
+            <img src="https://nbtmce.in/BRANCH/a14.jpg" alt="">
+            <img src="https://nbtmce.in/BRANCH/a10.jpg" alt="">
+            <img src="https://nbtmce.in/BRANCH/a12.jpg" alt="">
+            <img src="https://nbtmce.in/BRANCH/a13.jpg" alt="">
+            <img src="https://nbtmce.in/BRANCH/a15.jpg" alt="">
+            <img src="https://nbtmce.in/BRANCH/a16.jpg" alt="">
+            <img src="https://nbtmce.in/BRANCH/a17.jpg" alt="">
+        </marquee>
+    </div>
+    </div>
+    <div class="footer">
+        <img src="https://nbtmce.in/img/fl.webp" alt="">
+    </div>
+    <div class="footer-last">
+        <h3>® All Rights Reserved . Content Copyright © 2019 </h3>
+        <h2><a href="https://mail.hostinger.com/?clearSession=true&_user=sun@nbtmce.in">Email: sun@nbtmce.in</a>
+        </h2>
+        <h3>Designed and Developed by NBTMCE (OPC) PRIVATE LIMITED</h3>
+        <h2><a class="gcode" href="https://nbtmce.in/phpqrcode/index.php">QR CODE Generate</a></h2>
+    </div>
+    </div>
+</body>
+
+</html>
