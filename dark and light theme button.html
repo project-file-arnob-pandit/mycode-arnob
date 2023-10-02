@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="logo.png" type="image/x-icon">
+    <title>light and dark button</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: ;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #box h1,
+        h3 {
+            text-align: center;
+        }
+
+        #box button {
+            padding: 10px;
+            margin-left: 45px;
+            margin-top: 20px;
+            border-radius: 40px;
+        }
+        .one{
+            background: #000;
+            color: white;
+            font-weight: 600;
+            cursor: pointer;
+        }
+        ::selection {
+            background: chartreuse;
+            color: blue;
+        }
+
+        .click {
+            background: red;
+            color: white;
+            font-weight: 900;
+            cursor: pointer;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div id="box">
+        <h1>wolcome to my website</h1>
+        <h3>hallo my name is arnob pandit</h3>
+        <button class="one" onclick="dark();">Dark mode</button>
+        <button class="click" onclick="subc()">subcribe</button>
+    </div>
+</body>
+<script>
+    let vl = 0;
+    let m = 0;
+    let btn = document.querySelector('.one');
+            
+    function dark() {
+        if (m == 1) {
+            // unsubcribe
+            document.body.style.backgroundColor = 'black'
+            document.body.style.color = 'white'
+            btn.style.backgroundColor = "white"
+            btn.style.color= 'black'
+            
+            m=0;
+            document.querySelector('.one').innerHTML = 'Light mode'
+        }
+        else {
+            // subcribe
+            document.body.style.backgroundColor = 'white'
+            document.body.style.color = 'black'
+            document.querySelector('.one').innerHTML = 'Dark mode'
+            btn.style.backgroundColor = "black"
+            btn.style.color= 'white'
+            m=1;
+            
+
+        }
+
+
+
+
+
+    }
+    function subc() {
+        let subcribe = document.querySelector('.click');
+        if (vl == 1) {
+            // unsubcribe
+            subcribe.style.backgroundColor = "white"
+            subcribe.style.color = "black"
+            vl = 0;
+
+        }
+        else {
+            // subcribe
+            subcribe.style.backgroundColor = "red"
+            subcribe.style.color = "white"
+            vl = 1;
+
+        }
+    }
+</script>
+
+</html>

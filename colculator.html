@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+
+        }
+        body{
+            background-color: #0c1022;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 20px;
+            color: yellow;font-weight: 900;text-transform: uppercase;
+            }
+    .outline{
+    position: relative;
+    width: 510px;
+    height:650px;
+  
+    background: #040717;
+    border-radius: 50px 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    margin-top: 70px;
+}
+.outline::before{
+    
+    position: absolute;
+    width: 170%;
+    height: 170%;
+    content: '';
+    background-image: conic-gradient(transparent, transparent, transparent, #ee00ff);
+    animation: rotate_border 6s linear infinite;
+
+}
+.outline::after{
+    
+    position: absolute;
+    width: 170%;
+    height: 170%;
+    content: '';
+    background-image: conic-gradient(transparent, transparent, transparent, #00ccff);
+    animation: rotate_border 6s linear infinite;
+    animation-delay: -3s;
+}
+@keyframes rotate_border{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+.outbox{
+    position: absolute;
+    content: '';
+    background-color: #0c1022;
+
+    border-radius: 50px 5px;
+    inset: 5px;
+    /* padding: 50px 40px; */
+    z-index: 10;
+    color: #00ccff;
+
+}
+.outbox h1{
+    text-align: center;
+    margin-top: 10px;
+}
+
+        button{
+            color: #00ccff;
+            background-color: #0c1022;
+            border-radius: 50px 5px;
+            z-index: 10;
+            /* border: 1px solid #00ccff; */
+            background-color: #0c1022;
+        }
+        .display{
+            padding-top: 15px;
+            padding-bottom: 20px;
+        }
+        .display input{
+            margin: 10px 10px 10px 10px ;
+            width: 95%;
+            height: 80px;
+            font-size: 50px;
+            outline: 0;
+            border: 0;
+            padding-right: 20px;
+           text-align: end;
+           color: #00ccff;
+           background: transparent;
+           border-bottom: 2px solid #00ccff;
+           font-weight: 700;
+          }
+          .display input:focus{
+            
+            border: #00ccff solid 2px;
+          }
+          .dcb{
+      
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top:;
+            padding-bottom: 20px;
+          }
+          .dcb button{
+            width: 200px;
+            height: 80px;
+            font-size: 30px;
+            font-weight: 700;
+            border-radius: 30px 0px;
+           margin: 0 20px 0 20px;
+          }
+        .btn{
+            /* display: flex; */
+            width: 500px;
+            /* height: 400px; */
+            margin-left: 3px;
+           
+        }
+        .btn button{
+            width: 100px;
+            height: 80px;
+            font-size: 40px;
+            margin: 10px;
+            font-weight: 700;
+            
+        }
+
+    </style>
+</head>
+<body>
+    <div class="outline">
+    <div class="outbox">
+        <!-- <h1>calculator</h1> -->
+        <div class="display">
+            <input type="text" class="screen">
+        </div>
+        <div class="dcb">
+            <button type="button" class="btn btn-clear">clear</button>
+            <button type="button" class="btn btn-equal">=</button>
+        </div>
+        <div class="btn">
+            <button  type="button" class="btn btn-red"  data-num="2">2</button>
+            <button  type="button" class="btn btn-red"  data-num="1">1</button>
+            <button  type="button" class="btn btn-red" data-num="3">3</button>
+            <button  type="button" class="btn btn-red" data-num="+">+</button>
+            <button  type="button" class="btn btn-red" data-num="4">4</button>
+            <button  type="button" class="btn btn-red" data-num="5">5</button>
+            <button type="button" class="btn btn-red"  data-num="6">6</button>
+            <button  type="button" class="btn btn-red" data-num="-">-</button>
+            <button  type="button" class="btn btn-red" data-num="7">7</button>
+            <button type="button" class="btn btn-red"  data-num="8">8</button>
+            <button  type="button" class="btn btn-red" data-num="9">9</button>
+            <button  type="button" class="btn btn-red" data-num="*">*</button>
+            <button type="button" class="btn btn-red"  data-num=".">.</button>
+            <button  type="button" class="btn btn-red" data-num="0">0</button>
+            <button type="button" class="btn btn-red"  data-num="%">%</button>
+            <button  type="button" class="btn btn-red" data-num="/">/</button>
+        </div>
+    </div>
+</div>
+</body>
+<script>
+(function() {
+
+
+let screen = document.querySelector('.screen');
+let buttons = document.querySelectorAll('.btn');
+let clear = document.querySelector('.btn-clear');
+let equal = document.querySelector('.btn-equal');
+
+buttons.forEach(function(button){
+    button.addEventListener('click',function(e){
+        let value = e.target.dataset.num;
+        screen.value = value;
+    });
+
+});
+    equal.addEventListener('click',function(e){
+        if(screen.value === ''){
+            screen.value ="plase enter";
+            
+
+        }
+        else{
+            let answer = eval(screen.value);
+            screen.value = answer;
+        }
+    });
+     clear.addEventListener('click',function(e){
+        screen.value ="";
+    });
+
+})();
+
+</script>
+</html>

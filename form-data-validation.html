@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        body{
+            background: yellow;
+        }
+        form {
+            width: 56vh;
+            margin: 100px auto 0 auto;
+            padding: 20px;
+            background-color:lightpink ;
+            padding-left: 36px;
+            border-radius: 4px;
+            font-size: 12px;
+        }
+        .formdesign{
+            display: flex;
+            flex-direction: column;
+            /* align-items:unsafe; */
+        }
+        form h1{
+            text-align: center;
+            font-size: 40px;
+            
+        }
+        p{
+            padding: 12px 0  5px 0;
+            font-size: 15px;
+            font-weight: bold;
+            text-transform: uppercase;
+            align-items: end;
+        }
+        input{
+            width: 47vh;
+            height: 40px;
+            font-size: 20px;
+            outline: 0;
+          
+        }
+        .but{
+            margin-top: 15px;
+            margin-left: 15vh;
+            width: 20vh;
+            height: 40px;
+            font-size: 20px;
+            font-weight: bold;
+            text-transform: capitalize;
+            border-radius: 5px;
+            outline: 0;
+            border: none;
+        }
+        input:focus{
+           
+            border: 3px  solid  #09c372;
+        }
+        input{
+            /* text-transform: capitalize; */
+            border-radius: 10px; ;
+        }
+        span{
+            font-size: 15px;
+            color: red;
+        }
+        .fphone{
+            initial-value: 10;
+        }
+    </style>
+</head>
+
+<body>
+    
+    <div class="conlaner">
+        <form action="/myaction.php" name="myform" autocomplete="off" onsubmit="return validateForm()" method="post">
+            <h1>Fetback Form</h1>
+            <div class="formdesign" id="name"> 
+            <p>Name :</p><input type="text" name="fname" ><span class="formerror"></span>
+
+        </div>
+        <div class="formdesign" id="phone">
+            <p>mobile no :</p><input type="number" name="fphone" min="1"><span class="formerror"></span>
+
+        </div>
+        <div class="formdesign" id="email">
+            <p>Email Id :</p><input type="email" name="femail"><span class="formerror"></span>
+
+        </div>
+        <div class="formdesign" id="pass">
+            <p>password :</p><input type="password" name="fpass" ><span class="formerror"></span>
+
+        </div> 
+        <div class="formdesign" id="cpass">
+            <p>Confiam password :</p><input type="password" name="fcpass"><span class="formerror"></span>
+
+        </div>
+        <button class="but" value="submit" type="submit" onclick="openp">submit</button>
+    </form>
+    </div>
+</body>
+<script>
+ function clearError(){
+    errors = document.getElementsByClassName('formerror');
+    for( let item of errors)
+    {
+        item.innerHTML = "";
+        document.button.style.background.red;
+
+    }
+
+ }
+
+function seterror(id,error){
+//set error inside tag of id
+    element = document.getElementById(id);
+    element.getElementsByClassName('formerror')[0].innerHTML = error;
+
+} 
+ function validateForm(){
+    var returnval = true;
+
+
+    var name = document.forms['myform']["fname"].value;
+   // name
+    if(name.length<7){
+        seterror("name" ," *length of name is to shorts");
+        returnval = false;
+
+    }
+    if(name.length<1){
+        seterror("name" ," *Enter yours full Name");
+        returnval = false;
+
+    }
+
+
+    var phone = document.forms['myform']["fphone"].value;
+   // phone
+   if(phone.length<10){
+       seterror("phone" ," *enter valid number");
+       returnval = false;
+
+   }
+   if(phone.length>10){
+
+       seterror("phone" ," *number is minimum 10 digits");
+       returnval = false;
+
+   }
+
+    var email = document.forms['myform']["femail"].value;
+    if(email.length<1){
+       seterror("email" ," *Enter your Email Id");
+       returnval = false;
+
+   }
+   
+    if(email.length>50){
+        seterror("email" ," *length of email is to long");
+        returnval = false;
+
+    }
+    var pass = document.forms['myform']["fpass"].value;
+   
+   if(pass.length<6){
+       seterror("pass" ," *password minimum 6 characters");
+       returnval = false;
+
+   }
+   var cpass = document.forms['myform']["fcpass"].value;
+
+   if(cpass != pass){
+       seterror("cpass" ," *do not match password");
+       returnval = false;
+
+   }
+
+    
+
+
+
+
+
+    return returnval;
+ };
+
+</script>
+
+</html>

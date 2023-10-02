@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QR code genarate</title>
+    <link rel="shortcut icon" href="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=welcome to my website"
+        type="image/x-icon">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: ;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /* background: rgba(18, 4, 97, 0.5); */
+            background: rgb(254,116,101);
+        }
+
+        .contenar {
+            position: absolute;
+            /* left: 40%; */
+            top: 20%;
+            width: 300px;
+          height: 360px;
+            background: rgb(1, 5, 43);
+           
+            padding: 20px;
+            border-radius: 10px;
+            
+        }
+
+        .contenar p {
+            text-transform: capitalize;
+            text-align: center;
+            margin-bottom: 35px;
+            font-weight: 900;
+            color: yellow;
+        }
+
+        .inputbox {
+            position: relative;
+            width: 300px;;
+
+        }
+
+        .inputbox input {
+
+            padding: 10px 15px;
+            width: 86%;
+            /* border: none;
+        outline: none; */
+            border: 1px solid rgba(255, 255, 255, 0.25);
+            background: white;
+            border-radius: 5px;
+            color: black;
+            font-weight: 600;
+            font-size: 1em;
+
+        }
+
+        .inputbox span {
+            position: absolute;
+            pointer-events: none;
+            left: 0;
+            top: 0;
+            padding: 15px 20px;
+            font-size: 1em;
+            transition: 0.6s;
+            text-transform: uppercase;
+            color: rgba(255, 255, 255, 0.25);
+            letter-spacing: 0.1em;
+
+        }
+
+        .inputbox input:focus~span,
+        .inputbox input:valid~span {
+            color: #1d2d3a;
+            font-size: 0.95em;
+            transform: translateY(-25px) translateX(5px);
+            padding: 3px 7px;
+            background: #00dfc4;
+            border-radius: 4px;
+
+
+        }
+        .contenar button {
+
+            width: 100%;
+            padding: 8px;
+            margin-top: 20px;
+            
+            border-radius: 5px;
+            font-weight: 900;
+            text-transform: capitalize;
+            background: rgb(49, 245, 81);
+        }
+
+        .image {
+            position: relative;
+            top: 10px;
+            left: 45px;
+            width: 170px;
+            height: 170px;
+            padding: 10px;
+            background: ;
+            border-radius: 10px;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="contenar">
+        <p>genarate QR code</p>
+        <div class="inputbox">
+            <input type="text" name="" id="text" required>
+            <span>text or url</span>
+        </div>
+        <div class="image" id="ibox">
+            <img src="" id="image">
+        </div>
+        <button onclick="genarateQR()">genarate QR code</button>
+    </div>
+</body>
+<script>
+let imagebox = document.getElementById('ibox');
+let qrimage = document.getElementById('image');
+let text = document.getElementById('text');
+
+function genarateQR(){
+    if(text.value.length>0){
+        qrimage.src = "https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=" + text.value;
+}
+}
+
+</script>
+
+</html>

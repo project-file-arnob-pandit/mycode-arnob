@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>add to card project</title>
+</head>
+
+<body>
+    <button onclick="
+        console.log(`show quentity : ${showqty}`);
+        ">show qty</button>
+    <button onclick="
+    // short hand code
+    showqty ++;
+    // long hand code
+    // showqty = showqty + 1;
+    console.log(`show quentity : ${showqty}`);
+    ">add to cart</button>
+    <!-- <select name="" id="">
+        <option value="">1</option>
+        <option value="">2</option>
+        <option value="">3</option>
+        <option value="">4</option>
+        <option value="">5</option>
+    </select> -->
+    <button onclick="
+    // short hand code
+    showqty += 2;
+    // long hand code
+    //  showqty = showqty + 2;
+    console.log(`show quentity : ${showqty}`);
+    ">2 +</button>
+    <button onclick="
+     showqty = showqty + 3;
+    console.log(`show quentity : ${showqty}`);
+    ">3 +</button>
+
+    <button onclick="
+    showqty = 0;
+    console.log(`quentity is reset : ${showqty} `);
+    ">reset cart</button>
+</body>
+<script>
+
+    let showqty = 0;
+
+
+</script>
+
+</html>

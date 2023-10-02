@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.2.0/fonts/remixicon.css" rel="stylesheet">
+    <title>login page</title>
+</head>
+<body>
+    <div class="content">
+        <div class="form">
+            <h2>login form</h2>
+           
+           <label for=""><i class="ri-user-line"></i> 
+            <span>user id&nbsp;&nbsp;&nbsp;&nbsp;</span>
+            <input type="text" name="" id="user" required><img style="visibility: hidden;" src="eye-off-line.png" alt="">
+           </label>
+           
+           <label for=""><i class="ri-key-fill"></i>
+            <span>password</span>
+            <input type="password" name="" id="password" required><img onclick="sh()" src="eye-line.png" id="eye" alt="">
+           </label>
+           
+          <button type="submit" onclick="login();">login</button>     
+            <p>create a account? <span><a href="reg.html">Sign up</a></span></p>
+          
+        </div>
+        
+</body>
+<script src="script.js"></script>
+</html>

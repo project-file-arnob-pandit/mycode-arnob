@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>text effect animeted</title>
+    <style>
+*{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+font-family: ;
+}
+body{
+
+display: flex;
+justify-content: center;
+align-items: center;
+min-height: 100vh;
+background: #252839;
+
+}
+h2{
+    position: relative;
+    font-size: 5vw;
+    color: transparent;
+     -webkit-text-stroke: 4px #383d52 ;
+    text-transform: uppercase;
+
+
+}
+h2::before{
+    content: attr(data-t);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    color: #01fe87;
+    -webkit-text-stroke:0vw #383d52 ;
+    border-right: 4px solid #01fe87;
+    overflow: hidden;
+    animation: animated 6s linear infinite;
+
+}
+h2 a{
+    text-decoration: none;
+    color: transparent;
+    cursor: pointer;
+}
+@keyframes animated{
+    0%,100%{
+     width: 0%;   
+    }
+    30%{
+        width: 100%;
+    }
+}
+</style>
+</head>
+<body>
+<h2 data-t="addmission_open..."><a href="making a calcluator.html">addmission_open...</a></h2>
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: ;
+        }
+        html,body{
+        width:100%;
+        height:100%;
+        }
+            .container {
+      background: #f0f0f0;
+      box-sizing: border-box;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100vw;
+      height: 100vh;
+    }
+    button {
+      border-radius: 20px;
+      width: 60px;
+      height: 60px;
+      background: #f0f0f0;
+      box-shadow:  0 0 0 #cccccc,
+                   0 0 0 #ffffff,
+                    10px 10px 10px #cccccc inset,
+                    -10px -10px 10px #ffffff inset;
+      animation: anime 3s cubic-bezier(0.16, 1, 0.3, 1) 1s infinite alternate;
+      border: none;
+      /* outline: none; */
+     
+    }
+     
+    @keyframes anime {
+      0% {
+        width: 60px;
+        height: 60px;
+        background: #f0f0f0;
+        box-shadow:  0 0 0 #cccccc,
+                     0 0 0 #ffffff,
+                      10px 10px 10px #cccccc inset,
+                      -10px -10px 10px #ffffff inset;
+      }
+      100% {
+        width: 60px;
+        height: 60px;
+        background: #f8f8f8;
+        box-shadow:  10px 10px 10px #cccccc,
+                     10px 10px 10px #ffffff,
+                     0 0 0 #cccccc inset,
+                     0 0 0 #ffffff inset;
+      }
+    }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <button onclick="alert('wellcome');">click me</button>
+    </div>
+</body>
+</html>

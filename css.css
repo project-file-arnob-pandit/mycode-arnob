@@ -1,0 +1,30 @@
+/* universal selector */
+*{  /* rgb code */
+ 
+    color: rgb(38, 255, 0);
+}
+
+
+/* element selector */
+h1{
+ /* hexadecimal code */
+ color: #ff0000;
+}
+/* class selector */
+.main{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 25px;
+}
+/* id selector */
+#nam{
+    width: 150px;
+    height: 30px;
+}
+input{
+  /* color name code  */
+    background: greenyellow;
+    
+}
+label{
+  cursor: pointer;
+}

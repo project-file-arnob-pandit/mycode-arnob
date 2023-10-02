@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="logo.png" type="image/x-icon">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: ;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        .box {
+            position: absolute;
+            top: 20%;
+
+            background: blue;
+            border-radius: 20px;
+            padding: 20px;
+        }
+
+        .box input {
+
+            margin-bottom: 10px;
+            width: 100%;
+            height: 40px;
+            text-align: right;
+            padding: 4px;
+
+            font-size: 16px;
+        }
+
+        .box p {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        .box p button {
+            width: 40px;
+            height: 40px;
+            margin: 5px;
+            border-radius: 5px;
+            font-size: 20px;
+        }
+    </style>
+    <title>calcluator</title>
+</head>
+
+<body>
+    <div class="box">
+        <input type="text" name="" class="js answer" id="design">
+        <p>
+            <button onclick="updateCalculation('');">c</button>
+            <button onclick="
+            calculation = '';
+
+                // Display the calculation on the page
+                // instead of console.log
+                displayCalculation();
+
+                localStorage.setItem('answer', answer);
+            ">ac</button>
+            <button onclick="">&LeftArrow;</button>
+            <button onclick="updateCalculation('%');">%</button>
+        </p>
+        <p>
+            <button onclick="updateCalculation('1');">1</button>
+            <button onclick="updateCalculation('2');">2</button>
+            <button onclick="updateCalculation('3');">3</button>
+            <button onclick="updateCalculation('+');">+</button>
+        </p>
+        <p>
+            <button onclick="updateCalculation('4');">4</button>
+            <button onclick="updateCalculation('5');">5</button>
+            <button onclick="updateCalculation('6');">6</button>
+            <button onclick="updateCalculation('-');">-</button>
+        </p>
+        <p>
+            <button onclick="updateCalculation('7');">7</button>
+            <button onclick="updateCalculation('8');">8</button>
+            <button onclick="updateCalculation('9');">9</button>
+            <button onclick="updateCalculation('*');">*</button>
+        </p>
+        <p>
+            <button onclick="updateCalculation('.');">.</button>
+            <button onclick="updateCalculation('0');">0</button>
+            <button onclick="
+            answer = eval(answer);
+
+            // Display the calculation on the page
+            // instead of console.log
+            displayCalculation();
+      
+            localStorage.setItem('answer', answer);">=</button>
+            <button onclick="updateCalculation('/');">/</button>
+        </p>
+    </div>
+</body>
+
+</html>
