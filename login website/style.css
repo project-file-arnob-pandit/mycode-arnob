@@ -1,0 +1,121 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
+    color: chartreuse;
+}
+body{
+    width: 100%;
+    height: 100%;
+}
+*::selection{
+    color: blue;
+    background: chartreuse;
+}
+.content{
+    background: darkblue;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+
+}
+.content .form{
+    border: 4px solid chartreuse;
+    width: 400px;
+    height: 450px;
+    text-align: center;
+    border-radius: 10px;
+}
+.form h2{
+    margin-top: 40px;
+    text-transform: uppercase;
+    padding-bottom:40px ;
+}
+.form label{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    
+}
+.form label span{
+    position: absolute;
+    margin-top: -60px;
+    margin-left: -150px;
+    text-transform: capitalize;
+    transition: all ease 0.4s;
+    visibility: ;
+}
+
+
+.form input{
+    width: 60%;
+    height: 40px;
+    margin: 15px;
+
+    background: transparent;
+    padding: 5px;
+    border: none;
+    border-bottom:2px solid chartreuse;
+    
+    font-size: 20px;
+    color: white;
+    transition: all ease 0.8s;
+}
+.form input:focus{
+   font-size: 20px;
+   color: white;
+   outline: none;
+   background: rgba(124, 228, 21, 0.7);
+   transition: all ease 1s;
+   font-weight: 900;
+   border-radius: 6px;
+}
+.form button{
+    margin-top: 30px;
+   
+    height: 40px;
+    margin-left: 20px;
+    font-size: 20px;
+    font-weight: 900;
+    padding:1px 20px;
+    text-transform: capitalize;
+    color: chartreuse;
+    background: transparent;
+    border: 2px solid;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.form button:focus{
+    color: black;
+    background: chartreuse;
+    transition: all ease 0.4s;
+}
+.form p{
+    margin-top: 40px;
+}
+.form p span{
+    color: chartreuse;
+    font-weight: 900;
+    cursor: pointer;
+    background: ;
+    border: 1px solid;
+    border-radius: 4px;
+    padding: 2px 4px;
+
+}
+
+.form span a{
+    text-decoration: none;
+    color: chartreuse;
+}
+.form  img{
+    
+  margin-right:-12px;
+  cursor: pointer;
+   
+}

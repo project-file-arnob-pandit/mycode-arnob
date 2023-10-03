@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>otp genarate</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+
+        body {
+            width: 100%;
+            height: 80vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .box {
+            background: skyblue;
+            border: 2px solid black;
+            height: 160px;
+            width: 200px;
+            border-radius: 10px;
+            text-align: center;
+
+        }
+
+        .box #sentotp,
+        #btn {
+            padding: 10px;
+            border-radius: 5px;
+            text-transform: capitalize;
+
+        }
+
+        .box h2 {}
+
+        .box span {
+            color: crimson;
+            width: 100%;
+            float: left;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-size: 20px;
+            padding: 10px;
+            border-radius: 20px;
+        }
+
+        .box input {
+            height: 30px;
+            margin-bottom: 10px;
+            border-radius: 10px;
+            padding-left: 10px;
+            text-align: start;
+            letter-spacing: 30px;
+            font-size: 15px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <h2>generate otp</h2>
+        <span></span>
+        <input type="text" name="" id="votp" max="4">
+        <button id="sentotp" onclick="genarate();">sent otp</button>
+        <button id="btn" onclick="inputotp();">verify otp</button>
+    </div>
+</body>
+<script>
+    let sentotp = document.getElementById('sentotp');
+    let otp = document.getElementById('otp');
+    let invotp = document.getElementById('votp');
+    let otpvalue = document.querySelector('span');
+    let v = 0;
+    function genarate() {
+        if (v == 0) {
+            let no = Math.floor(Math.random() * 8999) + 1000;
+            //prompt('verify otp\n valid 2min', no);
+            v = 1;
+            otpvalue.innerHTML = no;
+
+
+            document.getElementById('btn').style.backgroundColor = 'green';
+            sentotp.innerHTML = 'cancel';
+            sentotp.style.backgroundColor = 'red';
+            sentotp.style.color = 'black';
+
+        }
+        else {
+            sentotp.style.backgroundColor = 'white';
+            sentotp.style.color = 'black';
+            sentotp.innerHTML = 'resent otp';
+            v = 0;
+        }
+    }
+    function inputotp() {
+
+        if (invotp.Value == otpvalue.Value) {
+            alert('verify sucessful')
+            invotp.innerHTML = "";
+        }
+        else {
+            alert('otp not valid')
+        }
+
+    }
+
+</script>
+
+</html>
